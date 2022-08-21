@@ -1,5 +1,4 @@
 import Card from "./shared/Card";
-import { v4 as uuidv4 } from "uuid";
 import { useState, useContext, useEffect } from "react";
 import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
@@ -51,7 +50,6 @@ const FeedbackForm = () => {
       if (feedbackEdit.edit === true) {
         Edit(feedbackEdit.item.id, newFeedback);
       } else {
-        newFeedback.id = uuidv4();
         Add(newFeedback);
       }
       setText("");
